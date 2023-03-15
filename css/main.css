@@ -14,8 +14,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-
 }
 html {
   color: #222;
@@ -105,6 +103,7 @@ body{
   --green:#d1d1d3;
   --hover:rgba(0, 0, 0,.2);
   --hovercolor:var(--white);
+  --footer:black;
   transition: all .5s ease;
 
 }
@@ -118,13 +117,13 @@ body.dark-mode{
   --green:#44bd32;
   --hover:rgba(255, 255, 255,.8);
   --hovercolor:var(--black);
+  --footer:#8c7ae6;
 }
 .pop-up-container{
   position: fixed;
   top: 5rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
+
   z-index: 1000;
 }
 .pop-up{
@@ -134,10 +133,10 @@ body.dark-mode{
   color: white;
   border-radius: .3rem;
   text-align: center;
-  margin: 0 auto;
   transform: scale(0);
   transition: all .2s ease;
   width: fit-content;
+  margin: 0 auto;
   
 }
 .pop-up.active{
@@ -270,7 +269,7 @@ nav.active{
   background:transparent;
   border:none;
   padding:.625rem;
-  color:var(--black);
+  color:white;
   font-size: 3rem;
   font-weight: 600;
   transition: all .2s ease;
@@ -377,6 +376,7 @@ nav.active{
   text-align: center;
   color: var(--black);
   font-size: 3rem;
+  margin: 1rem 0;
 }
 .projects-container{
   width: 100%;
@@ -445,10 +445,12 @@ nav.active{
   justify-content: flex-end;
   color: var(--black);
   font-weight: 500;
+  font-weight: 700;
 }
 .languages{
   color: var(--green);
   font-size: 1rem;
+  font-weight: 100;
 }
 .project-buttons{
   display: flex;
@@ -487,6 +489,7 @@ nav.active{
 .contact-info a i{
   margin-right: .5rem;
 }
+
 .contact-social{
   margin-top: 5%;
   display: flex;
@@ -496,6 +499,9 @@ nav.active{
 }
 .contact-social a i{
   font-size: 4rem;
+}
+.contact-social a:hover i{
+  color: purple;
 }
 .contact-content{
   width: 80%;
@@ -548,12 +554,31 @@ nav.active{
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 600;
-  color: white ;
+  color: var(--black) ;
   text-align: center;
 }
 .send-mail-btn.disabled{
   pointer-events: none;
 }
+footer{
+  border-top: .01rem solid var(--black);
+  padding: 1rem 0;
+  margin-top: .5rem;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: 0rem;
+  flex-flow: column nowrap;
+}
+footer p{
+  text-align: center;
+  color: var(--black);
+}
+.footer-icon a i{
+  font-size: 2rem;
+  color: var(--footer);
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -653,6 +678,9 @@ nav.active{
   .project{
     flex-flow: row;
   }
+  .project a{
+    width: 50%;
+  }
   .project-info{
     width: 50%;
     height: 100%;
@@ -663,7 +691,7 @@ nav.active{
     margin: 0 auto;
   }
   .project-image{
-    width: 50%;
+    width: 100%;
     height: 100%;
   }
   .description{
@@ -685,8 +713,15 @@ nav.active{
     padding-left: 15rem;
     max-width: 98.5vw;
   }
+  .pop-up{
+    transition: all .2s ease;
+  }
+  .pop-up.active{
+    transform:translateX(-7.5rem) scale(1) ;
+
+  }
   .tools{
-    z-index: 1000;
+    z-index: 1002;
   }
   .close-nav,
   .open-nav{
@@ -734,6 +769,16 @@ nav.active{
     font-size: 1rem;
     gap: 2rem;
     justify-content: center;
+  }
+  footer{
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  footer >*{
+    width: 45%;
+  }
+  .footer-icon{
+    margin: 0;
   }
  
 }
