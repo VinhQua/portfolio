@@ -86,7 +86,7 @@ const enableEmailBtn = ()=>{
         sendMailBtn.setAttribute('href','#contact');
     } else {
         const message = mailBody.value + '\r\n' + `  Contact at:${clientEmail.value}`
-        sendMailBtn.setAttribute('href',`mailto:dragonlinuxnoinochi@gmail.com?subject=Hire Front End Developer from ${clientName.value}&body=${message}`)
+        sendMailBtn.setAttribute('href',`mailto:nguyen.vinh.quang.io.zzz@gmail.com?subject=Hire Front End Developer from ${clientName.value}&body=${message}`)
     }
     
 
