@@ -172,7 +172,7 @@ nav{
   height: 100vh;
   width: 100vw;
   position: fixed;
-  z-index: 100;
+  z-index: 1001;
   transition:all .3s ease;
   left: -100vw;
   background-color: rgba(17, 2, 2,.4);
@@ -237,11 +237,23 @@ nav.active{
 }
 .slide{
   min-width: 100%;
- 
 }
 .slide img{
   width: 100%;
-  height: 100%;
+  height: 95%;
+}
+.slide p{
+  width: 100%;
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+  z-index: 10000;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 2rem;
+  font-size: 700;
+  font-family: 'Permanent Marker', cursive;
 }
 .slide-controls{
   position: absolute;
@@ -261,13 +273,20 @@ nav.active{
   color:var(--black);
   font-size: 3rem;
   font-weight: 600;
+  transition: all .2s ease;
 }
 #next-btn:focus, #prev-btn:focus{
   outline:none;
 }
+
 #skills{
   width: 100%;
   overflow: hidden;
+}
+#skills h3{
+  text-align: center;
+  color: var(--black);
+  font-size: 3rem;
 }
 .skills-container{
   height: 15.625rem;
@@ -354,6 +373,11 @@ nav.active{
   width: 100%;
 
 }
+#projects h3{
+  text-align: center;
+  color: var(--black);
+  font-size: 3rem;
+}
 .projects-container{
   width: 100%;
   height: 100%;
@@ -439,6 +463,8 @@ nav.active{
   margin-top: .5rem;
   border-radius: .4rem;
   text-align: center;
+  text-decoration: none;
+
 }
 .project-button:hover{
   background-color: var(--hover);
@@ -650,7 +676,6 @@ nav.active{
     bottom: .5rem;
     right: .5rem;
     height: 100%;
-
     justify-content: flex-end;
   }
 }
@@ -658,6 +683,7 @@ nav.active{
   /* Style adjustments for viewports that meet the condition */
   body{
     padding-left: 15rem;
+    max-width: 98.5vw;
   }
   .tools{
     z-index: 1000;
@@ -671,7 +697,7 @@ nav.active{
     width: 15rem;
   }
   #about{
-    height: 50%;
+    height: 80%;
   }
   .projects-container{
     flex-flow: row wrap;
