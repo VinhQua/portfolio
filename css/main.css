@@ -625,12 +625,13 @@ nav.active{
     flex-flow: column wrap;
   }
   .project{
-    flex-flow: row;position: relative;
+    flex-flow: row;
   }
   .project-info{
     width: 50%;
     height: 100%;
     padding: 1rem;
+    
   }
   .project-name{
     margin: 0 auto;
@@ -639,12 +640,18 @@ nav.active{
     width: 50%;
     height: 100%;
   }
+  .description{
+    height: 100%;
+   
+  }
   .project-buttons{
     flex-flow: row nowrap;
     gap: 1rem;
-    position: absolute;
     bottom: .5rem;
     right: .5rem;
+    height: 100%;
+
+    justify-content: flex-end;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -671,11 +678,11 @@ nav.active{
   }
   .project{
     width: 45%;
-    flex-flow: row;
+    flex-flow: column;
   }
   .project-image{
-    width: 50%;
-    height: 100%;
+    width: 100%;
+ 
   }
   .project-buttons{
     flex-flow: row nowrap;
@@ -689,6 +696,18 @@ nav.active{
   }
   .contact-content{
     width: 50%;
+  }
+  .project-info{
+    width: 100%;
+  }
+  .description{
+    width: 100%;
+  }
+  .project-buttons{
+    width: 100%;
+    font-size: 1rem;
+    gap: 2rem;
+    justify-content: center;
   }
  
 }
