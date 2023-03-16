@@ -14,6 +14,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+
 }
 html {
   color: #222;
@@ -94,30 +96,37 @@ body{
   height: 100vh;
   width: 100vw;
   background-color: var(--white);
-  --white:#f5f6fa;
-  --orange:#c23616;
-  --purple:rgba(232, 227, 227,.5);
-  --black:#2f3640;
-  --lightbg:#dcdde1;
-  --blue:#00a8ff;
-  --green:#d1d1d3;
-  --hover:rgba(0, 0, 0,.2);
-  --hovercolor:var(--white);
-  --footer:black;
+  --white:#CAC691;
+
+  --black:#152A3E;
+
+  --buttonbg:#152A3E;
+  --hover:#B4C7D9;
+  --buttoncolor:white;
   transition: all .5s ease;
 
 }
+a{
+  font-family: 'Lekton', sans-serif;
+}
+h1,h2,h3,h4{
+  font-family: 'Lexend Tera', sans-serif;
+  color: var(--black);
+}
+p{
+  font-family: 'Lekton', sans-serif;
+  color: var(--black);
+}
+
 body.dark-mode{
-  --white:#2f3640;
-  --orange:#c23616;
-  --purple:#8c7ae6;
-  --black:#f5f6fa;
-  --lightbg:#2f3640;
-  --blue:rgb(228, 228, 127);
-  --green:#44bd32;
-  --hover:rgba(255, 255, 255,.8);
-  --hovercolor:var(--black);
-  --footer:#8c7ae6;
+  --white:#152A3E;
+  --black:#CAC691;
+
+  --buttonbg:#CAC691;
+  --hover:#E7E5CB;
+  --buttoncolor:black;
+
+
 }
 .pop-up-container{
   position: fixed;
@@ -129,7 +138,7 @@ body.dark-mode{
 .pop-up{
   padding:0.3rem .7rem;
   font-size: 2rem;
-  background-color: rgba(0, 0, 0,.5);
+  background-color: rgba(0, 0, 0,.4);
   color: white;
   border-radius: .3rem;
   text-align: center;
@@ -155,7 +164,7 @@ body.dark-mode{
 }
 .tool{
   padding: .2rem 0.5rem;
-  background-color: rgba(17, 2, 2,.2);
+  background-color: rgba(17, 2, 2,.1);
   border-radius: .5rem;
 }
 .tool:hover{
@@ -165,6 +174,7 @@ body.dark-mode{
 .tool i{
   font-size: 3rem;
   color: var(--black);
+  transition: all .2s ease;
 }
 
 nav{
@@ -196,14 +206,29 @@ nav.active{
 }
 .menu{
   padding-top: 4rem;
-  width: 15rem;
+  width: fit-content;
   height: 100%;
-  gap: 2rem;
+  gap: .7rem;
   display: flex;
   flex-flow: column;
   background-color: var(--white);
   position: relative;
   border-right: .001rem solid var(--black)
+}
+.profile{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile img{
+  border-radius: 50%;
+  border: .1rem solid var(--buttonbg);
+}
+.profile span{
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
 }
 .menu a{
   text-decoration: none;
@@ -237,6 +262,7 @@ nav.active{
 .slide{
   min-width: 100%;
 }
+
 .slide img{
   width: 100%;
   height: 95%;
@@ -251,8 +277,7 @@ nav.active{
   transform: translateY(-50%);
   text-align: center;
   padding: 2rem;
-  font-size: 700;
-  font-family: 'Permanent Marker', cursive;
+
 }
 .slide-controls{
   position: absolute;
@@ -285,7 +310,9 @@ nav.active{
 #skills h3{
   text-align: center;
   color: var(--black);
-  font-size: 3rem;
+  font-size: 2.2rem;
+  padding-top:5rem ;
+  padding-bottom: 1.25rem;
 }
 .skills-container{
   height: 15.625rem;
@@ -327,7 +354,7 @@ nav.active{
 }
 .skill::before,
 .skill::after{
-  background: linear-gradient(to right, --white 0%, --black 100%);
+ 
   content: '';
   height: 100%;
   position: absolute;
@@ -352,17 +379,17 @@ nav.active{
   height: 100%;
   width: 100%;
   transition: transform .5s;
-  background-color: var(--purple);
+  background-color: var(--buttonbg);
   border-radius: .5rem;
 }
 .skill-content span{
   font-weight: 700;
-  color: var(--black);
+  color: var(--buttoncolor);
   font-size: 1.4rem;
 }
 .skill-content i{
   font-size: 4rem;
-  color: var(--black);
+  color: var(--buttoncolor);
 }
 .skill-content:hover{
   transform: translateZ(30px);
@@ -375,8 +402,9 @@ nav.active{
 #projects h3{
   text-align: center;
   color: var(--black);
-  font-size: 3rem;
-  margin: 1rem 0;
+  font-size: 2.2rem;
+  padding-top: 5rem;
+  padding-bottom: 1.25rem;
 }
 .projects-container{
   width: 100%;
@@ -388,7 +416,7 @@ nav.active{
 
 }
 .project{
-  border: .005rem solid rgb(205, 204, 204);
+  border: .005rem solid var(--buttonbg);
   border-radius: .7rem;
   margin-bottom: 2rem;
   display: flex;
@@ -398,15 +426,17 @@ nav.active{
   gap: 1rem;
   width: 95%;
   transform: scale(0.95);
+   padding-top: 1.25rem;
+   padding-bottom: 2.5rem;
 }
 .project:hover{
   transform: scale(1);
   cursor: pointer;
 }
 .project-top{
-  background-color: var(--green);
+  background-color: var(--buttonbg);
   padding:0.7rem 1rem;
-  color: var(--black);
+  color: var(--buttoncolor);
   font-weight: 600;
   position: absolute;
   transform: translateX(-19%) translateY(-50%);
@@ -419,7 +449,7 @@ nav.active{
 }
 .project-top div{
   
-  background-color:  var(--green);
+  background-color:  var(--buttonbg);
   height: 100%;
   width: 27%;
   left: -9px;
@@ -436,21 +466,25 @@ nav.active{
 }
 .project-name{
   text-align: center;
-  margin-left: 1.5rem;
-  color: var(--blue);
+  font-size: 1.23rem;
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
 }
 .description{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
-  color: var(--black);
   font-weight: 500;
   font-weight: 700;
+  
+}
+.rating{
+  padding-bottom: 1.875rem;
 }
 .languages{
-  color: var(--green);
   font-size: 1rem;
   font-weight: 100;
+  padding-bottom: 1.875rem;
 }
 .project-buttons{
   display: flex;
@@ -459,8 +493,8 @@ nav.active{
 .project-button{
   padding:0.7rem 1rem;
   font-weight: 600;
-  color: var(--black);
-  background-color: var(--purple);
+  color: var(--buttoncolor);
+  background-color: var(--buttonbg);
   font-size: 1rem;
   margin-top: .5rem;
   border-radius: .4rem;
@@ -470,7 +504,6 @@ nav.active{
 }
 .project-button:hover{
   background-color: var(--hover);
-  color: var(--hovercolor);
   cursor: pointer;
 }
 #contact{
@@ -480,18 +513,20 @@ nav.active{
   justify-content: center;
   height: fit-content;
   flex-flow: column nowrap;
+  padding-top: 5rem;
 }
+
 .contact-info a{
   text-decoration: none;
   color: var(--black);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 .contact-info a i{
   margin-right: .5rem;
 }
 
 .contact-social{
-  margin-top: 5%;
+  padding: 1.875rem 0;
   display: flex;
   gap: 5%;
   justify-content: center;
@@ -508,14 +543,14 @@ nav.active{
 }
 .contact-content h3{
   text-align: center;
-  font-size: 4rem;
-  color: var(--black);
+  font-size: 2rem;
 }
 .mail{
   display: flex;
   flex-flow: column wrap;
   gap: 1rem;
   align-items: flex-end;
+  padding: 1.875rem 0;
 }
 .mail .flex-box{
   display: flex;
@@ -538,7 +573,7 @@ nav.active{
   width:100%;
   padding: .2rem .5rem;
   border-radius: .3rem;
-  background-color: var(--lightbg);
+  background-color: var(--white);
   color: var(--black);
   font-weight: 600;
   font-size: 1.5rem;
@@ -547,22 +582,26 @@ nav.active{
 .send-mail-btn{
   width: 5rem;
   margin-right: 0rem;
-  background-color: var(--purple);
+  background-color: var(--buttonbg);
   border: none;
   border-radius: .2rem;
   padding: .2rem .5rem;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--black) ;
+  color: var(--buttoncolor) ;
   text-align: center;
+}
+.send-mail-btn:hover{
+  background-color: var(--buttonbg);
+  color: var(--buttoncolor);
 }
 .send-mail-btn.disabled{
   pointer-events: none;
 }
 footer{
   border-top: .01rem solid var(--black);
-  padding: 1rem 0;
+  padding: 1.875rem 0;
   margin-top: .5rem;
   display: flex;
   justify-items: center;
@@ -572,11 +611,10 @@ footer{
 }
 footer p{
   text-align: center;
-  color: var(--black);
 }
 .footer-icon a i{
   font-size: 2rem;
-  color: var(--footer);
+  color: var(--buttonbg);
 }
 
 /* ==========================================================================
@@ -673,17 +711,16 @@ footer p{
     height: 70%;
   }
   .projects-container{
-    flex-flow: column wrap;
+    flex-flow: row wrap;
   }
   .project{
-    flex-flow: row;
+    flex-flow: column;
+    width: 45%;
   }
   .project a{
-    width: 50%;
+    width: 100%;
   }
   .project-info{
-    width: 50%;
-    height: 100%;
     padding: 1rem;
     
   }
@@ -711,7 +748,7 @@ footer p{
   /* Style adjustments for viewports that meet the condition */
   body{
     padding-left: 15rem;
-    max-width: 98.5vw;
+    max-width: 98.9vw;
   }
   .pop-up{
     transition: all .2s ease;
@@ -731,6 +768,9 @@ footer p{
     left: 0;
     width: 15rem;
   }
+  .menu a{
+    font-size: 2.5rem;
+  }
   #about{
     height: 80%;
   }
@@ -738,13 +778,20 @@ footer p{
     flex-flow: row wrap;
   }
   .project{
-    width: 45%;
+    width: 30%;
     flex-flow: column;
+  }
+  .project a{
+    width: 100%;
+  }
+  .project-name{
+    margin: 0 auto;
   }
   .project-image{
     width: 100%;
- 
+    height: 100%;
   }
+
   .project-buttons{
     flex-flow: row nowrap;
     gap: 1rem;

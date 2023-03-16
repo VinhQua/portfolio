@@ -1,5 +1,6 @@
-
-
+const smile = document.querySelector('.smile');
+const tools = document.querySelectorAll('.tool i');
+const about = document.querySelector('#about')
 const slideContainer = document.querySelector('.slide-container');
 const slide = document.querySelector('.slides');
 const nextBtn = document.querySelector('#next-btn');
@@ -18,7 +19,7 @@ const body = document.querySelector('body');
 const sections = document.querySelectorAll('.menu a');
 let slides = document.querySelectorAll('.slide');
 let index = 1;
-const interval = 3000;
+const interval = 9000;
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length -1].cloneNode(true);
 let slideId;
@@ -62,6 +63,11 @@ slide.addEventListener('transitionend',()=>{
         index=slides.length-1;
         slide.style.transform =`translateX(${-slideWidth*index}px`;
     }
+    // if(slides[index].innerHTML.includes('span')){
+    //     smile.style.transform = `rotate(90deg)`
+    // } else {
+    //     smile.style.transform = `rotate(0deg)`
+    // }
 })
 startSlide()
 
@@ -138,3 +144,18 @@ const darkModeToggle =(e)=>{
     }
 }
 mode.addEventListener('click',darkModeToggle);
+const toolColor = (e)=>{
+    if (body.classList.contains('dark-mode')){
+        tools.forEach(tool => tool.style.color = `#CAC691`);
+        return
+    } 
+    console.log(this.scrollY);
+    console.log(about.clientHeight);
+    if (this.scrollY < about.clientHeight){
+        tools.forEach(tool => tool.style.color = `white`);
+    } else {
+        tools.forEach(tool => tool.style.color = `black`);
+    }
+}
+toolColor();
+window.addEventListener('scroll',toolColor);
