@@ -159,3 +159,4 @@ const toolColor = (e)=>{
 }
 toolColor();
 window.addEventListener('scroll',toolColor);
+window.addEventListener('resize',()=>document.location.reload());
