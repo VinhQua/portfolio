@@ -19,7 +19,7 @@ const body = document.querySelector('body');
 const sections = document.querySelectorAll('.menu a');
 let slides = document.querySelectorAll('.slide');
 let index = 1;
-const interval = 9000;
+let interval = 9000;
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length -1].cloneNode(true);
 let slideId;
@@ -29,10 +29,11 @@ firstClone.id = 'first-clone';
 lastClone.id = 'last-clone';
 slide.append(firstClone);
 slide.prepend(lastClone);
-const slideWidth = slides[index].clientWidth;
+let slideWidth = slides[index].clientWidth;
 const getSlides =()=> document.querySelectorAll('.slide');
 slide.style.transform =`translateX(${-slideWidth*index}px`
 const moveToNext=()=>{
+    slideWidth = slides[index].clientWidth
     slides = getSlides();    
     if (index >= slides.length-1) return
         index++;
@@ -40,6 +41,7 @@ const moveToNext=()=>{
         slide.style.transition =`.7s`
 }
 const moveToPrevious=()=>{
+    slideWidth = slides[index].clientWidth
     slides = getSlides();    
     if (index <=0) return
     index--;
@@ -71,12 +73,6 @@ slide.addEventListener('transitionend',()=>{
 })
 startSlide()
 
-slideContainer.addEventListener('mouseenter',(e)=>{
-    clearInterval(slideId)
-})
-slideContainer.addEventListener('mouseleave',()=>{
-    startSlide();
-});
 
 slideContainer.addEventListener('mousedown',()=> isDown =true);
 nextBtn.addEventListener('click',moveToNext);
@@ -159,4 +155,8 @@ const toolColor = (e)=>{
 }
 toolColor();
 window.addEventListener('scroll',toolColor);
-window.addEventListener('resize',()=>document.location.reload());
+window.addEventListener('resize',()=>{
+    index =1;
+    slideWidth = slides[index].clientWidth
+    slide.style.transform =`translateX(0)`
+});
