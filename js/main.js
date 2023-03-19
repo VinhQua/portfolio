@@ -118,6 +118,7 @@ const sendEmail = ()=>{
     clientName.value ='';
     clientEmail.value = "";
     mailBody.value =''; 
+    enableEmailBtn();
 }
 sendMailBtn.addEventListener('click',sendEmail);
 
