@@ -356,8 +356,7 @@ nav.active{
   color: var(--buttoncolor);
 }
 .skill-content:hover{
-  transform: translateZ(30px);
-  cursor: pointer;
+  background-color: var(--hover);
 }
 #projects{
   width: 100%;

@@ -109,12 +109,15 @@ const sendEmail = ()=>{
         }, 1500);
         
     } else{
-        popUp.textContent ='Loading...'
+        popUp.textContent ='Thank You'
         popUp.classList.add('active');
         setTimeout(() => {
             popUp.classList.remove('active');
         }, 1500);
     }
+    clientName.value ='';
+    clientEmail.value = "";
+    mailBody.value =''; 
 }
 sendMailBtn.addEventListener('click',sendEmail);
 
