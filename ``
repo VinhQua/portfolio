@@ -1,0 +1,89 @@
+[33mcommit 0868103e027e6bf2cdf614d089d0a240be95081f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Sun Mar 19 19:05:18 2023 +0700
+
+    Fix email button
+
+[33mcommit 560d83c01645ecfaf616de95cc19680a77e6fbb6[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Sun Mar 19 19:00:49 2023 +0700
+
+    Fix bus
+
+[33mcommit 157e92f95f2447c2672e5f0ae9769a70a317fef8[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Fri Mar 17 00:09:54 2023 +0700
+
+    fix window resize
+
+[33mcommit 8eb9d633b94e28bf8aec17d56909fc2b56301e55[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Thu Mar 16 23:30:21 2023 +0700
+
+    add window resize
+
+[33mcommit ecd0bdb2e9843ac7c56d4a51dae1e9ff90a2104e[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Thu Mar 16 14:22:44 2023 +0700
+
+    Fix content
+
+[33mcommit de245f7723ee220ff0db7e66e752c8ef709f438a[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Thu Mar 16 14:14:21 2023 +0700
+
+    change image
+
+[33mcommit 522e825bd9eeed691dacda968a88222aa2ff78ee[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Thu Mar 16 14:01:50 2023 +0700
+
+    Fix spelling in projects
+
+[33mcommit 8d851b79f737566a005e237e7905e4e845d5bfa1[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Thu Mar 16 13:40:24 2023 +0700
+
+    Fix layout issues
+
+[33mcommit a28dfcff3157e2c97092afb1da9a75db20d9906b[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Thu Mar 16 12:55:28 2023 +0700
+
+    Fix menu a font size
+
+[33mcommit 2c5f5216535eff8f00506777cd4eb1f073862629[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Thu Mar 16 09:18:58 2023 +0700
+
+    fix background color
+
+[33mcommit 283e959c7319d358fae9296d568c8c1255a717cf[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Wed Mar 15 18:17:23 2023 +0700
+
+    fix gmail
+
+[33mcommit ee2407fe4cb80d3d5a1282311c3f7e23b3cfc371[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Wed Mar 15 17:04:13 2023 +0700
+
+    fix css
+
+[33mcommit ac419f450cba88536b5947e70051842719918e50[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Wed Mar 15 15:38:36 2023 +0700
+
+    fix css
+
+[33mcommit c0bafd5280dfdf7f4cc179beed41258b5bd79ac5[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Wed Mar 15 11:36:43 2023 +0700
+
+    fix css
+
+[33mcommit 6fb5eac6e937d19b475d15301670408eb093b612[m[33m ([m[1;31morigin/gh-pages[m[33m, [m[1;32mgh-pages[m[33m)[m
+Author: VinhQua <dragonlinuxnoinochi@gmai.com>
+Date:   Wed Mar 15 11:20:07 2023 +0700
+
+    First upload
