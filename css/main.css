@@ -209,7 +209,7 @@ nav.active{
   padding-top: 4rem;
   width: fit-content;
   height: 100%;
-  gap: .7rem;
+  gap: .2rem;
   display: flex;
   flex-flow: column;
   background-color: var(--white);
@@ -235,9 +235,9 @@ nav.active{
 .menu a{
   text-decoration: none;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--black);
-  padding: 1rem;
+  padding: .5rem;
 }
 .menu a:hover{
   background-color: #999;
