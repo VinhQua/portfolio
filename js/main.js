@@ -87,8 +87,8 @@ const enableEmailBtn = ()=>{
     if (clientName.value ==='' || clientEmail.value === "" || mailBody.value==='' ){
         sendMailBtn.setAttribute('href','#contact');
     } else {
-        const message = mailBody.value + '\r\n' + `  Contact at:${clientEmail.value}`
-        sendMailBtn.setAttribute('href',`mailto:nguyen.vinh.quang.io.zzz@gmail.com?subject=Hire Front End Developer from ${clientName.value}&body=${message}`)
+        const message = mailBody.value  +  `%0D%0AContact at:${clientEmail.value}`
+        sendMailBtn.setAttribute('href',`mailto:vinhqua.io@gmail.com?subject=Hire Front End Developer from ${clientName.value}&body=${message}`)
     }
     
 
@@ -98,7 +98,7 @@ enableEmailBtn()
 mailBody.addEventListener('input',enableEmailBtn)
 clientName.addEventListener('input',enableEmailBtn)
 clientEmail.addEventListener('input',enableEmailBtn)
-const sendEmail = ()=>{
+const sendEmail = (e)=>{
     console.log(sendMailBtn.href)
     if (sendMailBtn.href.includes('#contact')){
         console.log('cliked')
@@ -115,10 +115,11 @@ const sendEmail = ()=>{
             popUp.classList.remove('active');
         }, 1500);
     }
-    clientName.value ='';
-    clientEmail.value = "";
-    mailBody.value =''; 
-    enableEmailBtn();
+     clientName.value ='';
+     clientEmail.value = "";
+     mailBody.value =''; 
+    // console.log(e);
+    //enableEmailBtn();
 }
 sendMailBtn.addEventListener('click',sendEmail);
 
