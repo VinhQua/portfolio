@@ -246,6 +246,7 @@ nav.active{
 .profile img{
   border-radius: 50%;
   border: .1rem solid var(--buttonbg);
+  width: 85%;
 }
 .profile span{
   margin-top: 1rem;
